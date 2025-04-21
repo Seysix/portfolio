@@ -93,7 +93,7 @@
   .project.visible { transform: translateY(0); }
   .project:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(20,255, 255,0.1);
   }
   .project h3 {
     margin-top: 0;
