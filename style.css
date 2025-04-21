@@ -43,9 +43,13 @@
     z-index: 1;
   }
 
-#theme-switch img {
-  filter: brightness(0);
-}
+  #theme-switch :hover{
+    cursor: pointer;
+  }
+
+  #theme-switch img {
+    filter: brightness(0);
+  }
 
   #theme-switch img:last-child {
     display: none;
