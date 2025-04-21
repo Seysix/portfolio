@@ -1,4 +1,3 @@
-// Typewriter effect
 const texts = ["Welcome to my portfolio.", "I build things for the web.", "Explore my projects."];
 let count = 0, idx = 0, current = '', letter = '';
 function type() {
@@ -18,7 +17,6 @@ function type() {
 }
 document.addEventListener('DOMContentLoaded', type);
 
-// Scroll reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -29,7 +27,6 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('section, .project').forEach(el => observer.observe(el));
 
-// Back to top button
 const toTop = document.getElementById('toTop');
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > 300) toTop.classList.add('show');
