@@ -1,10 +1,19 @@
-:root {
+  :root {
     --primary: #0073e6;
     --bg: #f0f2f5;
     --dark: #222;
-    --box-color-light: white;
-    --box-color-dark: black;
+    --box-color: white;
+    --switch-color: white;
   }
+
+  .darkmode{
+    --primary: #0073e6;
+    --bg: #222;
+    --dark: #f0f2f5;
+    --box-color: #121212;
+    --switch-color: #121212;
+  }
+
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
@@ -15,6 +24,45 @@
     overflow-x: hidden;
   }
   a { color: inherit; text-decoration: none; }
+
+  
+
+  #theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--switch-color);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+  }
+
+  #theme-switch :hover{
+    cursor: pointer;
+  }
+
+  #theme-switch img {
+    filter: brightness(0);
+  }
+
+  #theme-switch img:last-child {
+    display: none;
+  }
+
+  .darkmode #theme-switch img:first-child {
+    display: none;
+  }
+
+  .darkmode #theme-switch img:last-child {
+    display: block;
+    filter: brightness(1);
+  }
   
   .hero {
     position: relative;
@@ -49,7 +97,6 @@
     50% { border-color: rgba(255,255,255,0.75); }
   }
   
-  /* Sections */
   section {
     max-width: 800px;
     margin: 4rem auto;
@@ -85,7 +132,7 @@
     .projects { grid-template-columns: 1fr 1fr; }
   }
   .project {
-    background: white;
+    background: var(--box-color);
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
