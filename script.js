@@ -33,3 +33,10 @@ window.addEventListener('scroll', () => {
   else toTop.classList.remove('show');
 });
 toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+const emailLink = document.getElementById('email-link');
+emailLink.addEventListener('click', function(e) {
+  e.preventDefault();  
+  const email = this.textContent.trim();
+  navigator.clipboard.writeText(email)
+});
